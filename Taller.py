@@ -76,4 +76,14 @@ sedentarismo_mes = df.groupby('Mes')['Sedentario']
 mes_mas_sedentario= sedentarismo_mes.idxmax()
 print("Meses con mayor sedentarismo:")
 print(mes_mas_sedentario.idxmax())
+  
+"""PARTE 4"""
+import matplotlib.pyplot as plt  
 
+df['Clasificacion_IMC'].value_counts().plot(kind='bar', color='skyblue')
+plt.title('Distribución de la Clasificación del IMC')
+plt.xlabel('Clasificación')
+plt.ylabel('Número de pacientes')
+plt.xticks(rotation=0)
+plt.tight_layout()
+plt.show()
