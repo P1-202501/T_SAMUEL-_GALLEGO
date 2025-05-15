@@ -65,13 +65,15 @@ df['Metabolicamente_alterado'] = sum(condiciones) >=2
 
 
 """PARTE 3"""
-# Análisis por región
+# agrup por región
 riesgo_region = df.groupby('Región')['Metabolicamente_alterado']
+region_mas_riesgosa= riesgo_region.idxmax()
 print("Región con mayor riesgo metabólico:")
-print(riesgo_region.idxmax())
+print(region_mas_riesgosa.idxmax())
 
-# Análisis por mes
+# agrup por mes
 sedentarismo_mes = df.groupby('Mes')['Sedentario']
+mes_mas_sedentario= sedentarismo_mes.idxmax()
 print("Meses con mayor sedentarismo:")
-print(sedentarismo_mes.idxmax)
-print(df)
+print(mes_mas_sedentario.idxmax())
+
